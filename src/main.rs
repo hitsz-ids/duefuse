@@ -125,7 +125,7 @@ fn main() {
         .arg(
             Arg::new("auto_unmount")
                 .long("auto_unmount")
-                .help("Automatically unmount on process exit")
+                .help("Automatically unmount on process exit"),
         )
         .arg(
             Arg::new("allow-root")
