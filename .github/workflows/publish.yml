@@ -69,7 +69,7 @@ jobs:
       - name: Install fuse
         run: |
             sudo apt-get update
-            sudo apt-get install -y fuse libfuse-dev
+            sudo apt-get install -y fuse3 libfuse3-dev
       - name: Install linker
         if: matrix.build == 'linux' || matrix.build == 'aarch64-linux' || matrix.build == 'mips-linux' || matrix.build == 'mipsel-linux' ||matrix.build == 'mips64el-linux' || matrix.build == 'mips64-linux' || matrix.build == 'riscv64'
         run: sudo apt-get update && sudo apt-get install ${{ matrix.linker }} -y
