@@ -13,3 +13,15 @@ repos:
       - id: debug-statements
       - id: forbid-new-submodules
       - id: trailing-whitespace
+
+  - repo: https://github.com/doublify/pre-commit-rust
+    rev: master
+    hooks:
+      - id: fmt
+      - id: cargo-check
+
+ci:
+  skip:
+    # Cargo not available on CI
+    - "fmt"
+    - "cargo-check"
